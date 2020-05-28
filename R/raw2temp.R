@@ -89,7 +89,7 @@ raw2temp <-function(raw,E=1,OD=1,RTemp=20,ATemp=RTemp,IRWTemp=RTemp,IRT=1,RH=50,
   
   raw.obj<-(raw/E/tau1/IRT/tau2-raw.atm1.attn-raw.atm2.attn-raw.wind.attn-raw.refl1.attn-raw.refl2.attn)
   
-  temp.C<-PB/log(PR1/(PR2*(raw.obj+PO))+PF)-273.15
+  temp.C<-PB/ln(PR1/(PR2*(raw.obj+PO))+PF)-273.15
   
   temp.C
 }
